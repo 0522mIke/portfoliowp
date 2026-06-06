@@ -4,7 +4,7 @@
 
 ## デモ
 
-![サイトトップ](images/Screenshot.jpg)
+![サイトトップ](farmer-html/images/Screenshot.jpg)
 
 ## 使用技術
 

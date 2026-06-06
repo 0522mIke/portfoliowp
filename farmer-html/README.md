@@ -1,8 +1,10 @@
 # 宝山農場 - HTMLサイト
+
 北海道長沼町の農家サイトを想定した、Webコーポレートサイト。
 
 ## ディレクトリ構成
 
+```
 farmer-master-theme/
 ├── style.css
 ├── index.html
@@ -12,3 +14,4 @@ farmer-master-theme/
 ├── page-recruit.html
 ├── main.js
 └── images/
+```

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おてつたび・採用 | 宝山農家ファーム</title>
+  <meta name="description" content="宝山ファームでは、短期のお手伝い（おてつたび）から1日農業バイト、住み込み正社員まで、多様な仲間を歓迎しています。一緒に長沼町で働きませんか？">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body class="site-body">
+  <nav class="site-header">
+    <div class="site-header__container">
+      <a href="index.html" class="site-header__logo">
+        <img src="images/logo.png" alt="宝山ファーム" class="custom-logo">
+      </a>
+      <div class="site-header__nav">
+        <a href="index.html" class="site-header__nav-link">ホーム</a>
+        <a href="page-about.html" class="site-header__nav-link">私たちについて</a>
+        <a href="page-recruit.html" class="site-header__nav-link site-header__nav-link--active">おてつたび・採用</a>
+        <a href="page-contact.html" class="site-header__nav-link">お問い合わせ</a>
+      </div>
+    </div>
+  </nav>
+  <main class="site-main page-recruit">
+    <div class="page-container">
+      <h1 class="page-title sr-only">採用・お手伝いさん募集</h1>
+      <div id="page-recruiting" class="page-fade recruit-section">
+        <div class="recruit-header">
+          <span class="badge badge--red-outline">JOIN OUR TEAM</span>
+          <h1 class="recruit-title">みんなの「もうひとつの居場所」に。</h1>
+          <p class="recruit-desc">宝山ファームでは、1日のみの体験バイトから、1週間の農家滞在旅、海外からのステイ、住み込み正社員まで、多様な仲間を幅広く歓迎しています！</p>
+        </div>
+        
+        <div class="recruit-image-wrapper hover-pop">
+          <img src="images/farmes2.jpeg" alt="採用イメージ" class="recruit-image">
+        </div>
+        
+        <div class="recruit-grid">
+          <div class="recruit-card recruit-card--light btn-poyon">
+            <div class="recruit-card__content">
+              <span class="badge badge--red">1日から参加OK！旅する農業</span>
+              <h3 class="recruit-card__title">🎒 短期お手伝い・おてつたび募集</h3>
+              <p class="recruit-card__text">「週末だけ大自然でリフレッシュしたい」「プチ移住体験してみたい」そんな方にぴったり。交通費補助、美味しいおすそ分けお土産付き！</p>
+            </div>
+            <a href="single.html" class="btn btn--green">おてつたび募集要項を見る ➔</a>
+          </div>
+          
+          <div class="recruit-card recruit-card--green btn-poyon">
+            <div class="recruit-card__content">
+              <span class="badge badge--green">面接なし！アプリで即日バイト</span>
+              <h3 class="recruit-card__title">📱 1日農業バイト（DayWork）募集</h3>
+              <p class="recruit-card__text">空いた時間に働いてその日に給与ゲット。長沼町・千歳近郊にお住まいの方や、サクッと働きたい主婦・学生さんに大人気です。</p>
+            </div>
+            <button onclick="openRecruitModal('daywork')" class="btn btn--green">DayWork募集要項を見る ➔</button>
+          </div>
+          
+          <div class="recruit-card recruit-card--yellow btn-poyon">
+            <div class="recruit-card__content">
+              <span class="badge badge--yellow">国際交流・ファームステイ</span>
+              <h3 class="recruit-card__title">🌏 海外からのホームステイ受け入れ</h3>
+              <p class="recruit-card__text">私たちの畑には、毎年海外からも多くの学生や旅人が集まります。英語や異文化に触れながら、みんなで楽しく農作業をするファミリーです。</p>
+            </div>
+            <button onclick="openRecruitModal('homestay')" class="btn btn--green">インターン要項を見る ➔</button>
+          </div>
+          
+          <div class="recruit-card recruit-card--gray btn-poyon">
+            <div class="recruit-card__content">
+              <span class="badge badge--gray">正社員・将来の幹部候補</span>
+              <h3 class="recruit-card__title">🏡 住み込み正社員・研修生募集</h3>
+              <p class="recruit-card__text">本格的に農業を仕事にしたい方、将来独立して自分の畑を持ちたい方を全力支援。個室寮完備、充実の教育カリキュラムがあります。</p>
+            </div>
+            <button onclick="openRecruitModal('employee')" class="btn btn--green">正社員募集要項を見る ➔</button>
+          </div>
+        </div>
+      </div>
+      
+      <div id="recruitModal" class="modal hidden">
+        <div class="modal__content">
+          <button onclick="closeRecruitModal()" class="modal__close">✕</button>
+          <div style="text-align: center; margin-bottom: 0.5rem;">
+            <span id="recruit-modal-badge" class="badge badge--red-outline"></span>
+          </div>
+          <h3 class="modal__title" id="recruit-modal-title"></h3>
+          <div class="modal__body" id="recruit-modal-content" style="text-align: left;"></div>
+          <button onclick="closeRecruitModal()" class="btn btn--green btn-poyon">閉じる</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer__container">
+      <div class="site-footer__section">
+        <h4 class="site-footer__title">宝山農家ファーム</h4>
+        <p class="site-footer__text">〒069-1300 北海道夕張郡長沼町〇〇番地<br>TEL: 000-000-0000<br>Email: info@example.com</p>
+      </div>
+      <div class="site-footer__section">
+        <h4 class="site-footer__title site-footer__title--small text-accent">メニュー</h4>
+        <ul class="site-footer__nav">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="page-about.html">私たちについて</a></li>
+          <li><a href="page-recruit.html">おてつたび・採用</a></li>
+          <li><a href="page-contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__section">
+        <h4 class="site-footer__title site-footer__title--small text-accent">長沼町より愛をこめて</h4>
+        <p class="site-footer__text">私たちは大自然の中で、食べる人が心の底から元気になれる野菜作りに取り組んでいます。短期のおてつたびや、1日だけの農業デイワークも大歓迎です。</p>
+      </div>
+    </div>
+    <div class="site-footer__copyright">
+      <p>© 2026 宝山農家ファーム. All Rights Reserved. Created by Hozan.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+    </body>
+  </html>
